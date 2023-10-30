@@ -32,9 +32,13 @@ export default function HeroLayout1(props) {
     },
     {
       overrides: {
-        Eyebrow: { color: "rgba(188,236,245,1)", children: "Full-stack" },
+        Eyebrow: { color: "rgba(188,236,245,1)" },
         Heading: { color: "rgba(255,255,255,1)" },
-        Body: { color: "rgba(255,255,255,1)" },
+        Body: {
+          color: "rgba(255,255,255,1)",
+          children:
+            "Enter a caption and receive 3, unique, never-before-seen memes to download or share with friends!",
+        },
         Message: {},
         Button: {},
         HeroMessage: {},
@@ -127,7 +131,7 @@ export default function HeroLayout1(props) {
               position="relative"
               padding="0px 0px 0px 0px"
               whiteSpace="pre-wrap"
-              children="Full stack"
+              children="Welcome"
               {...getOverrideProps(overrides, "Eyebrow")}
             ></Text>
             <Text
@@ -149,7 +153,7 @@ export default function HeroLayout1(props) {
               position="relative"
               padding="0px 0px 0px 0px"
               whiteSpace="pre-wrap"
-              children="Build full-stack web and mobile apps in hours. Easy to start, easy to scale"
+              children="MemeMe is for You!"
               {...getOverrideProps(overrides, "Heading")}
             ></Text>
             <Text
@@ -172,7 +176,7 @@ export default function HeroLayout1(props) {
               position="relative"
               padding="0px 0px 0px 0px"
               whiteSpace="pre-wrap"
-              children="AWS Amplify is a complete solution that lets frontend web and mobile developers easily build, ship, and host full-stack applications on AWS, with the flexibility to leverage the breadth of AWS services as use cases evolve. No cloud expertise needed."
+              children="Enter a caption and receive 3, unique, never before seen memes to download or share with friends!"
               {...getOverrideProps(overrides, "Body")}
             ></Text>
           </Flex>

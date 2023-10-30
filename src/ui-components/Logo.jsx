@@ -62,7 +62,7 @@ export default function Logo(props) {
           minX: 0,
           minY: 0,
           width: 21.778564453125,
-          height: 18.909515380859375,
+          height: 18.909521102905273,
         }}
         paths={[
           {

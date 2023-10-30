@@ -68,8 +68,8 @@ export default function CTASection(props) {
             position="relative"
             padding="0px 0px 0px 0px"
             whiteSpace="pre-wrap"
-            children="Newsletter"
-            {...getOverrideProps(overrides, "Newsletter")}
+            children="Get Product Updates"
+            {...getOverrideProps(overrides, "Get Product Updates")}
           ></Text>
           <Text
             fontFamily="Inter"
@@ -89,10 +89,10 @@ export default function CTASection(props) {
             position="relative"
             padding="0px 0px 0px 0px"
             whiteSpace="pre-wrap"
-            children="Stay in touch and never miss an update"
+            children="Stay in touch and never miss a product update"
             {...getOverrideProps(
               overrides,
-              "Stay in touch and never miss an update"
+              "Stay in touch and never miss a product update"
             )}
           ></Text>
           <Text
