@@ -33,7 +33,10 @@ export default function HeroLayout1(props) {
     {
       overrides: {
         Eyebrow: { color: "rgba(188,236,245,1)" },
-        Heading: { color: "rgba(255,255,255,1)" },
+        Heading: {
+          color: "rgba(255,255,255,1)",
+          children: "MemeMe is for You!",
+        },
         Body: {
           color: "rgba(255,255,255,1)",
           children:
@@ -153,7 +156,7 @@ export default function HeroLayout1(props) {
               position="relative"
               padding="0px 0px 0px 0px"
               whiteSpace="pre-wrap"
-              children="MemeMe is for You!"
+              children="MemeHero is for You!"
               {...getOverrideProps(overrides, "Heading")}
             ></Text>
             <Text
@@ -176,7 +179,7 @@ export default function HeroLayout1(props) {
               position="relative"
               padding="0px 0px 0px 0px"
               whiteSpace="pre-wrap"
-              children="Enter a caption and receive 3, unique, never before seen memes to download or share with friends!"
+              children="Enter a caption and receive 3, unique, never before seen memes to download or share with friends - it’s that easy!"
               {...getOverrideProps(overrides, "Body")}
             ></Text>
           </Flex>

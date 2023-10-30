@@ -6,6 +6,7 @@
 
 import * as React from "react";
 import { ButtonProps, ImageProps, RatingProps, ViewProps } from "@aws-amplify/ui-react";
+import { MyIconProps } from "./MyIcon";
 export declare type EscapeHatchProps = {
     [elementHierarchy: string]: Record<string, unknown>;
 } | null;
@@ -22,6 +23,9 @@ export declare type GeneratedMemeOverridesProps = {
     "angrycat 1"?: PrimitiveOverrideProps<ImageProps>;
     Button?: PrimitiveOverrideProps<ButtonProps>;
     Rating?: PrimitiveOverrideProps<RatingProps>;
+    MyIcon39523746?: MyIconProps;
+    MyIcon39523747?: MyIconProps;
+    MyIcon39523748?: MyIconProps;
 } & EscapeHatchProps;
 export declare type GeneratedMemeProps = React.PropsWithChildren<Partial<ViewProps> & {
     overrides?: GeneratedMemeOverridesProps | undefined | null;

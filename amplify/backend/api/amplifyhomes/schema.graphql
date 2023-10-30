@@ -1,6 +1,22 @@
+type Meme @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  untitledfield: String
+  caption: String
+  image1_url: String
+  image1_downloaded: Boolean
+  image1_rating: Int
+  image2_url: String
+  image2_downloaded: Boolean
+  image2_rating: Int
+  image3_url: String
+  image3_downloaded: Boolean
+  image3_rating: Int
+}
+
 type Home @model @auth(rules: [{allow: public}]) {
   id: ID!
   address: String
   image_url: String
   price: Float
-} 
+}
+ 

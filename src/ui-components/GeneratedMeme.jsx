@@ -8,6 +8,7 @@
 import * as React from "react";
 import { getOverrideProps } from "./utils";
 import { Button, Image, Rating, View } from "@aws-amplify/ui-react";
+import MyIcon from "./MyIcon";
 export default function GeneratedMeme(props) {
   const { overrides, ...rest } = props;
   return (
@@ -60,6 +61,51 @@ export default function GeneratedMeme(props) {
         size="default"
         {...getOverrideProps(overrides, "Rating")}
       ></Rating>
+      <MyIcon
+        width="24px"
+        height="24px"
+        display="block"
+        gap="unset"
+        alignItems="unset"
+        justifyContent="unset"
+        overflow="hidden"
+        position="absolute"
+        top="515px"
+        left="242px"
+        padding="0px 0px 0px 0px"
+        type="twitter"
+        {...getOverrideProps(overrides, "MyIcon39523746")}
+      ></MyIcon>
+      <MyIcon
+        width="24px"
+        height="24px"
+        display="block"
+        gap="unset"
+        alignItems="unset"
+        justifyContent="unset"
+        overflow="hidden"
+        position="absolute"
+        top="515px"
+        left="288px"
+        padding="0px 0px 0px 0px"
+        type="instagram"
+        {...getOverrideProps(overrides, "MyIcon39523747")}
+      ></MyIcon>
+      <MyIcon
+        width="24px"
+        height="24px"
+        display="block"
+        gap="unset"
+        alignItems="unset"
+        justifyContent="unset"
+        overflow="hidden"
+        position="absolute"
+        top="515px"
+        left="334px"
+        padding="0px 0px 0px 0px"
+        type="email"
+        {...getOverrideProps(overrides, "MyIcon39523748")}
+      ></MyIcon>
     </View>
   );
 }
