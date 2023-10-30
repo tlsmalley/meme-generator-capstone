@@ -26,8 +26,8 @@ export default function NavBarHeaderMemeHero(props) {
       {...rest}
     >
       <Image
-        width="228px"
-        height="166px"
+        width="217px"
+        height="143px"
         display="block"
         gap="unset"
         alignItems="unset"
@@ -36,7 +36,7 @@ export default function NavBarHeaderMemeHero(props) {
         position="relative"
         padding="0px 0px 0px 0px"
         objectFit="cover"
-        {...getOverrideProps(overrides, "MEMEHERO 3")}
+        {...getOverrideProps(overrides, "lol 2")}
       ></Image>
       <Flex
         gap="40px"

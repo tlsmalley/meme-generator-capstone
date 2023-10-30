@@ -10,7 +10,7 @@ import { getOverrideProps } from "./utils";
 import { Button, Image, Rating, View } from "@aws-amplify/ui-react";
 import MyIcon from "./MyIcon";
 export default function GeneratedMeme(props) {
-  const { overrides, ...rest } = props;
+  const { meme, overrides, ...rest } = props;
   return (
     <View
       width="600px"
@@ -38,6 +38,7 @@ export default function GeneratedMeme(props) {
         left="42px"
         padding="0px 0px 0px 0px"
         objectFit="contain"
+        src={meme?.image1_url}
         {...getOverrideProps(overrides, "angrycat 1")}
       ></Image>
       <Button

@@ -19,7 +19,7 @@ export declare type Variant = {
 export declare type PrimitiveOverrideProps<T> = Partial<T> & React.DOMAttributes<HTMLDivElement>;
 export declare type NavBarHeaderMemeHeroOverridesProps = {
     NavBarHeaderMemeHero?: PrimitiveOverrideProps<FlexProps>;
-    "MEMEHERO 3"?: PrimitiveOverrideProps<ImageProps>;
+    "lol 2"?: PrimitiveOverrideProps<ImageProps>;
     "Frame 321"?: PrimitiveOverrideProps<FlexProps>;
     Welcome?: PrimitiveOverrideProps<TextProps>;
     "Generate Your Meme"?: PrimitiveOverrideProps<TextProps>;

@@ -10,12 +10,11 @@ import {
 function App() {
   return (
     <div className="App">
-      <h1>this is a test</h1>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet"/>
       <NavBarHeaderMemeHero/>
       <HeroLayout1/>
       <InputBox/>
       <GeneratedMeme/>
-      <MemeCardCollection/>
     </div>
   );
 }

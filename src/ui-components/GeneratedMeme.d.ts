@@ -5,6 +5,7 @@
  **************************************************************************/
 
 import * as React from "react";
+import { Meme } from "../models";
 import { ButtonProps, ImageProps, RatingProps, ViewProps } from "@aws-amplify/ui-react";
 import { MyIconProps } from "./MyIcon";
 export declare type EscapeHatchProps = {
@@ -28,6 +29,8 @@ export declare type GeneratedMemeOverridesProps = {
     MyIcon39523748?: MyIconProps;
 } & EscapeHatchProps;
 export declare type GeneratedMemeProps = React.PropsWithChildren<Partial<ViewProps> & {
+    meme?: Meme;
+} & {
     overrides?: GeneratedMemeOverridesProps | undefined | null;
 }>;
 export default function GeneratedMeme(props: GeneratedMemeProps): React.ReactElement;
