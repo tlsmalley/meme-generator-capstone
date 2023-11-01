@@ -20,9 +20,6 @@ function App() {
     <div className="App">
          <CaptionInput></CaptionInput>
          <CallAPI></CallAPI>
-         <div>
-            <MyButton onClick={handleButtonClick}>Send API Request</MyButton>
-        </div>
       <NavBarHeaderMemeHero/>
       <br />
       <HeroLayout1/>
