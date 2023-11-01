@@ -2,12 +2,36 @@ import { ModelInit, MutableModel } from "@aws-amplify/datastore";
 // @ts-ignore
 import { LazyLoading, LazyLoadingDisabled } from "@aws-amplify/datastore";
 
+type SiteContentMetaData = {
+  readOnlyFields: 'createdAt' | 'updatedAt';
+}
+
 type MemeMetaData = {
   readOnlyFields: 'createdAt' | 'updatedAt';
 }
 
 type HomeMetaData = {
   readOnlyFields: 'createdAt' | 'updatedAt';
+}
+
+type EagerSiteContent = {
+  readonly id: string;
+  readonly image_url?: string | null;
+  readonly createdAt?: string | null;
+  readonly updatedAt?: string | null;
+}
+
+type LazySiteContent = {
+  readonly id: string;
+  readonly image_url?: string | null;
+  readonly createdAt?: string | null;
+  readonly updatedAt?: string | null;
+}
+
+export declare type SiteContent = LazyLoading extends LazyLoadingDisabled ? EagerSiteContent : LazySiteContent
+
+export declare const SiteContent: (new (init: ModelInit<SiteContent, SiteContentMetaData>) => SiteContent) & {
+  copyOf(source: SiteContent, mutator: (draft: MutableModel<SiteContent, SiteContentMetaData>) => MutableModel<SiteContent, SiteContentMetaData> | void): SiteContent;
 }
 
 type EagerMeme = {

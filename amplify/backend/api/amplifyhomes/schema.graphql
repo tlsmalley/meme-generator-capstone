@@ -1,3 +1,8 @@
+type SiteContent @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  image_url: String
+}
+
 type Meme @model @auth(rules: [{allow: public}]) {
   id: ID!
   untitledfield: String

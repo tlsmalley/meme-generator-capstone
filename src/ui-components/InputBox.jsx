@@ -12,7 +12,7 @@ export default function InputBox(props) {
   const { overrides, ...rest } = props;
   return (
     <View
-      width="1465px"
+      width="1440px"
       height="478px"
       display="block"
       gap="unset"

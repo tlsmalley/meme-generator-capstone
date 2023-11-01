@@ -14,7 +14,7 @@ export default function NavBarHeaderMemeHero(props) {
     <Flex
       gap="40px"
       direction="row"
-      width="1465px"
+      width="1440px"
       height="209px"
       justifyContent="center"
       alignItems="center"

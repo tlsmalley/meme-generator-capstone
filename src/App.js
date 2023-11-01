@@ -1,4 +1,5 @@
 import './App.css';
+import { ThemeProvider } from '@aws-amplify/ui-react';
 import {
   MemeCardCollection,
   HeroLayout1,
@@ -10,13 +11,18 @@ import {
 
 function App() {
   return (
-    <div className="App" >
+    <ThemeProvider>
+    <div className="App" style="font-family:Montserrat" >
       <NavBarHeaderMemeHero/>
+      <br />
       <HeroLayout1/>
+      <br />
       <InputBox/>
+      <br />
       <GeneratedMeme/>
+      <br />
       <MarketingFooter/>
-    </div>
+    </div></ThemeProvider>
   );
 }
 

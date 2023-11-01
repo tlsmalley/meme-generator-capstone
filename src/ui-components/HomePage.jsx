@@ -35,7 +35,7 @@ export default function HomePage(props) {
         display="flex"
         gap="40px"
         direction="row"
-        width="1465px"
+        width="1440px"
         height="209px"
         justifyContent="center"
         alignItems="center"
@@ -131,7 +131,7 @@ export default function HomePage(props) {
         {...getOverrideProps(overrides, "Frame 4381")}
       >
         <InputBox
-          width="1465px"
+          width="1440px"
           height="478px"
           display="block"
           gap="unset"
