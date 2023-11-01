@@ -7,7 +7,8 @@
 /* eslint-disable */
 import * as React from "react";
 import { getOverrideProps } from "./utils";
-import { Button, Flex, Image, Text } from "@aws-amplify/ui-react";
+import LogoMH from "./LogoMH";
+import { Button, Flex, Text } from "@aws-amplify/ui-react";
 export default function NavBarHeaderMemeHero(props) {
   const { overrides, ...rest } = props;
   return (
@@ -18,6 +19,7 @@ export default function NavBarHeaderMemeHero(props) {
       height="209px"
       justifyContent="center"
       alignItems="center"
+      overflow="hidden"
       position="relative"
       boxShadow="0px 2px 6px rgba(0.05098039284348488, 0.10196078568696976, 0.14901961386203766, 0.15000000596046448)"
       padding="24px 32px 24px 32px"
@@ -25,9 +27,9 @@ export default function NavBarHeaderMemeHero(props) {
       {...getOverrideProps(overrides, "NavBarHeaderMemeHero")}
       {...rest}
     >
-      <Image
-        width="217px"
-        height="143px"
+      <LogoMH
+        width="322px"
+        height="256px"
         display="block"
         gap="unset"
         alignItems="unset"
@@ -35,9 +37,8 @@ export default function NavBarHeaderMemeHero(props) {
         shrink="0"
         position="relative"
         padding="0px 0px 0px 0px"
-        objectFit="cover"
-        {...getOverrideProps(overrides, "lol 2")}
-      ></Image>
+        {...getOverrideProps(overrides, "LogoMH")}
+      ></LogoMH>
       <Flex
         gap="40px"
         direction="row"

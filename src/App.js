@@ -11,7 +11,7 @@ import {
 
 function App() {
   return (
-    <div className="App" style="font-family:Montserrat" >
+    <div className="App">
       <NavBarHeaderMemeHero/>
       <br />
       <HeroLayout1/>

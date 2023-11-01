@@ -24,6 +24,7 @@ export { default as HomeUpdateForm } from "./HomeUpdateForm";
 export { default as InputBox } from "./InputBox";
 export { default as ItemCard } from "./ItemCard";
 export { default as Logo } from "./Logo";
+export { default as LogoMH } from "./LogoMH";
 export { default as LogoWithText } from "./LogoWithText";
 export { default as MEMEHERO2 } from "./MEMEHERO2";
 export { default as MarketingFooter } from "./MarketingFooter";

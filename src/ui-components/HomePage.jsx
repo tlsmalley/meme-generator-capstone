@@ -39,6 +39,7 @@ export default function HomePage(props) {
         height="209px"
         justifyContent="center"
         alignItems="center"
+        overflow="hidden"
         shrink="0"
         position="relative"
         boxShadow="0px 2px 6px rgba(0.05098039284348488, 0.10196078568696976, 0.14901961386203766, 0.15000000596046448)"
