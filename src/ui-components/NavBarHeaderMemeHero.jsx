@@ -28,8 +28,8 @@ export default function NavBarHeaderMemeHero(props) {
       {...rest}
     >
       <LogoMH
-        width="322px"
-        height="256px"
+        width="307px"
+        height="245px"
         display="block"
         gap="unset"
         alignItems="unset"

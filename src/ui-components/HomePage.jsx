@@ -133,7 +133,7 @@ export default function HomePage(props) {
       >
         <InputBox
           width="1440px"
-          height="478px"
+          height="399px"
           display="block"
           gap="unset"
           alignItems="unset"
