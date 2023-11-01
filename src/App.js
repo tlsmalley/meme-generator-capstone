@@ -4,17 +4,18 @@ import {
   HeroLayout1,
   GeneratedMeme,
   InputBox,
-  NavBarHeaderMemeHero
+  NavBarHeaderMemeHero,
+  MarketingFooter
 } from './ui-components';
 
 function App() {
   return (
-    <div className="App">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet"/>
+    <div className="App" >
       <NavBarHeaderMemeHero/>
       <HeroLayout1/>
       <InputBox/>
       <GeneratedMeme/>
+      <MarketingFooter/>
     </div>
   );
 }

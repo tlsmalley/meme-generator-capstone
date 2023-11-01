@@ -12,7 +12,7 @@ export default function InputBox(props) {
   const { overrides, ...rest } = props;
   return (
     <View
-      width="1600px"
+      width="1465px"
       height="478px"
       display="block"
       gap="unset"
@@ -29,8 +29,8 @@ export default function InputBox(props) {
         width="unset"
         height="unset"
         position="absolute"
-        top="247px"
-        left="1293px"
+        top="298px"
+        left="649px"
         size="default"
         isDisabled={false}
         variation="default"
@@ -39,8 +39,8 @@ export default function InputBox(props) {
       ></Button>
       <Loader
         position="absolute"
-        top="332px"
-        left="564px"
+        top="380px"
+        left="517px"
         size="large"
         variation="linear"
         {...getOverrideProps(overrides, "Loader")}
@@ -50,8 +50,8 @@ export default function InputBox(props) {
         height="215px"
         label="Enter a Caption"
         position="absolute"
-        top="111px"
-        left="204px"
+        top="73px"
+        left="216px"
         placeholder="Placeholder"
         size="default"
         isDisabled={false}

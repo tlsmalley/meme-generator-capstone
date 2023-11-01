@@ -19,6 +19,7 @@ export { default as GeneratedMeme } from "./GeneratedMeme";
 export { default as HeroLayout1 } from "./HeroLayout1";
 export { default as HeroLayout2 } from "./HeroLayout2";
 export { default as HomeCreateForm } from "./HomeCreateForm";
+export { default as HomePage } from "./HomePage";
 export { default as HomeUpdateForm } from "./HomeUpdateForm";
 export { default as InputBox } from "./InputBox";
 export { default as ItemCard } from "./ItemCard";

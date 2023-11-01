@@ -32,12 +32,13 @@ export default function HeroLayout1(props) {
     },
     {
       overrides: {
-        Eyebrow: { color: "rgba(188,236,245,1)" },
+        Eyebrow: { fontFamily: "Inter", color: "rgba(188,236,245,1)" },
         Heading: {
           color: "rgba(255,255,255,1)",
           children: "MemeMe is for You!",
         },
         Body: {
+          fontFamily: "Inter",
           color: "rgba(255,255,255,1)",
           children:
             "Enter a caption and receive 3, unique, never-before-seen memes to download or share with friends!",
@@ -116,7 +117,7 @@ export default function HeroLayout1(props) {
             {...getOverrideProps(overrides, "Message")}
           >
             <Text
-              fontFamily="Inter"
+              fontFamily="Montserrat"
               fontSize="16px"
               fontWeight="700"
               color="rgba(64,170,191,1)"
@@ -160,7 +161,7 @@ export default function HeroLayout1(props) {
               {...getOverrideProps(overrides, "Heading")}
             ></Text>
             <Text
-              fontFamily="Inter"
+              fontFamily="Montserrat"
               fontSize="16px"
               fontWeight="400"
               color="rgba(48,64,80,1)"

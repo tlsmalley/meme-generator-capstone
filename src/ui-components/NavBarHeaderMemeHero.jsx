@@ -7,7 +7,7 @@
 /* eslint-disable */
 import * as React from "react";
 import { getOverrideProps } from "./utils";
-import { Flex, Image, Text } from "@aws-amplify/ui-react";
+import { Button, Flex, Image, Text } from "@aws-amplify/ui-react";
 export default function NavBarHeaderMemeHero(props) {
   const { overrides, ...rest } = props;
   return (
@@ -137,6 +137,16 @@ export default function NavBarHeaderMemeHero(props) {
           {...getOverrideProps(overrides, "Privacy & Safety")}
         ></Text>
       </Flex>
+      <Button
+        width="165px"
+        height="unset"
+        shrink="0"
+        size="default"
+        isDisabled={false}
+        variation="default"
+        children="Login"
+        {...getOverrideProps(overrides, "Button")}
+      ></Button>
     </Flex>
   );
 }
