@@ -6,10 +6,11 @@
 
 /* eslint-disable */
 import * as React from "react";
-import { getOverrideProps } from "./utils";
+import { getOverrideProps, useNavigateAction } from "./utils";
 import { Button, Loader, TextAreaField, View } from "@aws-amplify/ui-react";
 export default function InputBox(props) {
   const { overrides, ...rest } = props;
+  const buttonOnClick = useNavigateAction({ type: "url", url: "" });
   return (
     <View
       width="1440px"
@@ -35,6 +36,9 @@ export default function InputBox(props) {
         isDisabled={false}
         variation="default"
         children="Generate Memes"
+        onClick={() => {
+          buttonOnClick();
+        }}
         {...getOverrideProps(overrides, "Button")}
       ></Button>
       <Loader

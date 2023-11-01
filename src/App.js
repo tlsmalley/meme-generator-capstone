@@ -2,6 +2,8 @@ import './App.css';
 //import { ThemeProvider } from '@aws-amplify/ui-react';
 import {
   MemeCardCollection,
+  CaptionInput,
+  CallAPI,
   HeroLayout1,
   GeneratedMeme,
   InputBox,
@@ -10,8 +12,17 @@ import {
 } from './ui-components';
 
 function App() {
+  const handleButtonClick = () => {
+    console.log('Button clicked. Send an API request.');
+};
+
   return (
     <div className="App">
+         <CaptionInput></CaptionInput>
+         <CallAPI></CallAPI>
+         <div>
+            <MyButton onClick={handleButtonClick}>Send API Request</MyButton>
+        </div>
       <NavBarHeaderMemeHero/>
       <br />
       <HeroLayout1/>
@@ -22,6 +33,7 @@ function App() {
       <br />
       <MarketingFooter/>
     </div>
+
   );
 }
 
