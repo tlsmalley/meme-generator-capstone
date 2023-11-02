@@ -5,6 +5,7 @@
  **************************************************************************/
 
 import * as React from "react";
+import { SiteContent } from "../models";
 import { ButtonProps, FlexProps, ImageProps, TextProps } from "@aws-amplify/ui-react";
 export declare type EscapeHatchProps = {
     [elementHierarchy: string]: Record<string, unknown>;
@@ -30,6 +31,8 @@ export declare type HeroLayout1OverridesProps = {
     image?: PrimitiveOverrideProps<ImageProps>;
 } & EscapeHatchProps;
 export declare type HeroLayout1Props = React.PropsWithChildren<Partial<FlexProps> & {
+    siteContent?: SiteContent;
+} & {
     mode?: "Dark" | "Light";
 } & {
     overrides?: HeroLayout1OverridesProps | undefined | null;

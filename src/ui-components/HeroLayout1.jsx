@@ -13,7 +13,7 @@ import {
 } from "./utils";
 import { Button, Flex, Image, Text } from "@aws-amplify/ui-react";
 export default function HeroLayout1(props) {
-  const { overrides: overridesProp, ...rest } = props;
+  const { siteContent, overrides: overridesProp, ...rest } = props;
   const variants = [
     {
       overrides: {
@@ -224,6 +224,7 @@ export default function HeroLayout1(props) {
           position="relative"
           padding="0px 0px 0px 0px"
           objectFit="unset"
+          src={siteContent?.image_url}
           {...getOverrideProps(overrides, "image")}
         ></Image>
       </Flex>

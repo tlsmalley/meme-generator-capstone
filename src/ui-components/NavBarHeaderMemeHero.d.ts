@@ -5,8 +5,7 @@
  **************************************************************************/
 
 import * as React from "react";
-import { LogoMHProps } from "./LogoMH";
-import { ButtonProps, FlexProps, TextProps } from "@aws-amplify/ui-react";
+import { ButtonProps, FlexProps, ImageProps, TextProps } from "@aws-amplify/ui-react";
 export declare type EscapeHatchProps = {
     [elementHierarchy: string]: Record<string, unknown>;
 } | null;
@@ -20,7 +19,7 @@ export declare type Variant = {
 export declare type PrimitiveOverrideProps<T> = Partial<T> & React.DOMAttributes<HTMLDivElement>;
 export declare type NavBarHeaderMemeHeroOverridesProps = {
     NavBarHeaderMemeHero?: PrimitiveOverrideProps<FlexProps>;
-    LogoMH?: LogoMHProps;
+    "lol 2"?: PrimitiveOverrideProps<ImageProps>;
     "Frame 321"?: PrimitiveOverrideProps<FlexProps>;
     Welcome?: PrimitiveOverrideProps<TextProps>;
     "Generate Your Meme"?: PrimitiveOverrideProps<TextProps>;
