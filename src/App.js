@@ -38,8 +38,8 @@ function App() {
         body: JSON.stringify({"uuid": randomUuid, "text_prompt": caption, "temperature": temperature})
       });
       if (response.ok) {
-        const data = await response.json(); // Assuming the response is JSON
-        setGeneratedImage(data.imageUrl); // Assuming data.imageUrl holds the URL to the image
+        const data = await response.json(); 
+        setGeneratedImage(data.imageUrl); 
         console.log(data);
       } else {
         console.error('HTTP error:', response.status);
@@ -47,7 +47,7 @@ function App() {
     } catch (error) {
       console.error('error making API call:', error);
     } finally {
-      setIsLoading(false); // Set back to false when image loads or fails to load
+      setIsLoading(false); 
     }
 
 };
@@ -64,8 +64,8 @@ const handleCaptionChange = (event) => {
   setCaption(event.target.value);
 };
 
-const handleTemperatureChange = (newValue) => {
-  const newTemperature = parseFloat(event.target.value);
+const handleTemperatureChange = (e) => { 
+  const newTemperature = parseFloat(e.target.value);
   if (!isNaN(newTemperature)) {
     setTemperature(newTemperature);
   }
@@ -91,7 +91,7 @@ const handleTemperatureChange = (newValue) => {
               type="number"
               placeholder="Set temperature"
               value={temperature}
-              onChange={handleTemperatureChange}
+              onChange={(e) => handleTemperatureChange(e)}
               min="0"
               max="1"
               step="0.1"
