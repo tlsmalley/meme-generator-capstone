@@ -35,7 +35,7 @@ function App() {
           headers: {
             'Content-Type': 'application/json',
           },
-          body: JSON.stringify({"uuid": "randomUuid", "text_prompt": caption, "temperature": temperature})
+          body: JSON.stringify({"uuid": randomUuid, "text_prompt": caption, "temperature": temperature})
       });
       const data = await response.json();
       setGeneratedImage(data.imageUrl);
