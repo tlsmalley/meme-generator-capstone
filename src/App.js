@@ -49,9 +49,9 @@ function App() {
     } finally {
       setIsLoading(false); // Set back to false when image loads or fails to load
     }
-  //     const data = await response.json();
-  //     setGeneratedImage(data.imageUrl);
-  //     console.log(data);
+      const data = await response.json();
+      setGeneratedImage(data.imageUrl);
+      console.log(data);
   // } catch (error) {
   //     console.error('error making API call:', error);
   // } finally {
