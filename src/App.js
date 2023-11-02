@@ -62,8 +62,21 @@ const handleTemperatureChange = (newValue) => {
           <br />
           <HeroLayout1/>
           <br />
-         <CaptionInput onChange={handleCaptionChange}></CaptionInput>
-         <TemperatureInput onChange={handleTemperatureChange}></TemperatureInput>
+          <input
+              type="text"
+              placeholder="Making memes is fun"
+              value={caption}
+              onChange={handleCaptionChange}
+          />
+          <input
+              type="number"
+              placeholder="Set temperature"
+              value={temperature}
+              onChange={handleTemperatureChange}
+              min="0"
+              max="1"
+              step="0.1"
+          />
          <CallAPI onClick={handleButtonClick}></CallAPI>
          <br />
          {isLoading && !generatedImage && <div>Loading image...</div>}
