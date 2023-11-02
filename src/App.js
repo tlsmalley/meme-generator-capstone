@@ -50,8 +50,8 @@ function App() {
       setIsLoading(false); // Set back to false when image loads or fails to load
     }
       // const data = await response.json();
-      setGeneratedImage(data.imageUrl);
-      console.log(data);
+      // setGeneratedImage(data.imageUrl);
+      // console.log(data);
   // } catch (error) {
   //     console.error('error making API call:', error);
   // } finally {
@@ -82,12 +82,15 @@ const handleTemperatureChange = (newValue) => {
           <br />
           <HeroLayout1/>
           <br />
+          
+          <div style={{ marginLeft: 'auto', marginRight: 'auto', width: '50%' }}>
           <input
               type="text"
               placeholder="Making memes is fun"
               value={caption}
               onChange={handleCaptionChange}
-          />
+          /></div>
+          <div style={{ marginLeft: 'auto', marginRight: 'auto', width: '50%' }}>
           <input
               type="number"
               placeholder="Set temperature"
@@ -96,12 +99,13 @@ const handleTemperatureChange = (newValue) => {
               min="0"
               max="1"
               step="0.1"
-          />
-         <CallAPI onClick={handleButtonClick}></CallAPI>
-         <br />
+          /></div>
+         <div style={{ marginLeft: 'auto', marginRight: 'auto', width: '50%' }}>
+          <CallAPI onClick={handleButtonClick}></CallAPI></div>
+         <div style={{ marginLeft: 'auto', marginRight: 'auto', width: '50%' }}>
          {isLoading && !generatedImage && <div>Loading image...</div>}
          {generatedImage && <GeneratedMeme imageUrl={generatedImage}></GeneratedMeme>}
-         <br />
+         <br /></div>
          <MarketingFooter/>
          <br />
 
