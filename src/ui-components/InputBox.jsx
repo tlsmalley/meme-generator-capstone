@@ -7,7 +7,7 @@
 /* eslint-disable */
 import * as React from "react";
 import { getOverrideProps, useNavigateAction } from "./utils";
-import { Button, Loader, TextAreaField, View } from "@aws-amplify/ui-react";
+import { Button, TextAreaField, View } from "@aws-amplify/ui-react";
 export default function InputBox(props) {
   const { overrides, ...rest } = props;
   const buttonOnClick = useNavigateAction({ type: "url", url: "" });
@@ -41,14 +41,6 @@ export default function InputBox(props) {
         }}
         {...getOverrideProps(overrides, "Button")}
       ></Button>
-      <Loader
-        position="absolute"
-        top="334px"
-        left="492px"
-        size="large"
-        variation="linear"
-        {...getOverrideProps(overrides, "Loader")}
-      ></Loader>
       <TextAreaField
         width="1034px"
         height="215px"

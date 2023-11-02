@@ -12,14 +12,30 @@ import {
 } from './ui-components';
 
 function App() {
-  const handleButtonClick = () => {
-    console.log('Button clicked. Send an API request.');
+  const handleButtonClick = async() => {
+    console.log('sending api call...');
+    try {
+      const response = await fetch('**api endpoint*', {
+          method: 'POST', 
+          headers: {
+          },
+          body: JSON.stringify({"uuid": "test-uuid", "text_prompt": "i love aws", "temperature": 0.1})
+      });
+      const data = await response.json();
+      console.log(data);
+  } catch (error) {
+      console.error('error making API call:', error);
+  }
+
 };
 
   return (
     <div className="App">
          <CaptionInput></CaptionInput>
          <CallAPI></CallAPI>
+         <br />
+         <br />
+         <br />
       <NavBarHeaderMemeHero/>
       <br />
       <HeroLayout1/>

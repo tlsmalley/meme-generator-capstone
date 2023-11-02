@@ -5,7 +5,7 @@
  **************************************************************************/
 
 import * as React from "react";
-import { ButtonProps, TextAreaFieldProps, ViewProps } from "@aws-amplify/ui-react";
+import { FlexProps, SliderFieldProps } from "@aws-amplify/ui-react";
 export declare type EscapeHatchProps = {
     [elementHierarchy: string]: Record<string, unknown>;
 } | null;
@@ -17,12 +17,11 @@ export declare type Variant = {
     overrides: EscapeHatchProps;
 };
 export declare type PrimitiveOverrideProps<T> = Partial<T> & React.DOMAttributes<HTMLDivElement>;
-export declare type InputBoxOverridesProps = {
-    InputBox?: PrimitiveOverrideProps<ViewProps>;
-    Button?: PrimitiveOverrideProps<ButtonProps>;
-    TextAreaField?: PrimitiveOverrideProps<TextAreaFieldProps>;
+export declare type TemperatureSliderOverridesProps = {
+    TemperatureSlider?: PrimitiveOverrideProps<FlexProps>;
+    SliderField?: PrimitiveOverrideProps<SliderFieldProps>;
 } & EscapeHatchProps;
-export declare type InputBoxProps = React.PropsWithChildren<Partial<ViewProps> & {
-    overrides?: InputBoxOverridesProps | undefined | null;
+export declare type TemperatureSliderProps = React.PropsWithChildren<Partial<FlexProps> & {
+    overrides?: TemperatureSliderOverridesProps | undefined | null;
 }>;
-export default function InputBox(props: InputBoxProps): React.ReactElement;
+export default function TemperatureSlider(props: TemperatureSliderProps): React.ReactElement;
