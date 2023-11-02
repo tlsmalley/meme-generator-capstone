@@ -31,16 +31,16 @@ function App() {
 
     try {
       const response = await fetch('https://cozpvp5akqiqq43lfnfffw6xee0npezn.lambda-url.us-west-2.on.aws/', {
-          method: 'POST', 
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({"uuid": randomUuid, "text_prompt": caption, "temperature": temperature})
+        method: 'POST', 
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({"uuid": randomUuid, "text_prompt": caption, "temperature": temperature})
       });
       if (response.ok) {
-        const blob = await response.blob(); // Convert the response to a blob
-        const imageUrl = URL.createObjectURL(blob); // Create a local URL from the blob
-        setGeneratedImage(imageUrl); // Set the local URL as the generated image
+        const data = await response.json(); // Assuming the response is JSON
+        setGeneratedImage(data.imageUrl); // Assuming data.imageUrl holds the URL to the image
+        console.log(data);
       } else {
         console.error('HTTP error:', response.status);
       }
