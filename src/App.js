@@ -99,21 +99,16 @@ const handleTemperatureChange = (newValue) => {
               min="0"
               max="1"
               step="0.1"
+              style={{ width: '100%', padding: '10px' }}
           /></div>
          <div style={{ marginLeft: 'auto', marginRight: 'auto', width: '50%' }}>
           <CallAPI onClick={handleButtonClick}></CallAPI></div>
          <div style={{ marginLeft: 'auto', marginRight: 'auto', width: '50%' }}>
-         {isLoading && !generatedImage && <div>Loading image...</div>}
+         {isLoading && !generatedImage && <div>Loading image... please be patient, greatness takes time</div>}
          {generatedImage && <GeneratedMeme imageUrl={generatedImage}></GeneratedMeme>}
          <br /></div>
          <MarketingFooter/>
          <br />
-
-      <br />
-      <InputBox/>
-      <GeneratedMeme/>
-      <br />
-      
     </div>
 
   );
