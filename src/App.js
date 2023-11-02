@@ -3,7 +3,7 @@ import Amplify from 'aws-amplify';
 import awsconfig from './aws-exports';
 
 //import { ThemeProvider } from '@aws-amplify/ui-react';
-import React, { useState } from 'react';
+import React, { useState , useEffect } from 'react';
 import {
   MemeCardCollection,
   CaptionInput,
@@ -37,17 +37,37 @@ function App() {
           },
           body: JSON.stringify({"uuid": randomUuid, "text_prompt": caption, "temperature": temperature})
       });
-      const data = await response.json();
-      setGeneratedImage(data.imageUrl);
-      console.log(data);
-  } catch (error) {
+      if (response.ok) {
+        const blob = await response.blob(); // Convert the response to a blob
+        const imageUrl = URL.createObjectURL(blob); // Create a local URL from the blob
+        setGeneratedImage(imageUrl); // Set the local URL as the generated image
+      } else {
+        console.error('HTTP error:', response.status);
+      }
+    } catch (error) {
       console.error('error making API call:', error);
-  } finally {
-    setIsLoading(false); //set back at false when image loads
-  }
+    } finally {
+      setIsLoading(false); // Set back to false when image loads or fails to load
+    }
+  //     const data = await response.json();
+  //     setGeneratedImage(data.imageUrl);
+  //     console.log(data);
+  // } catch (error) {
+  //     console.error('error making API call:', error);
+  // } finally {
+  //   setIsLoading(false); //set back at false when image loads
+  // }
 
 };
 
+useEffect(() => {
+  // This will be called when the component is unmounted or when generatedImage changes
+  return () => {
+    if (generatedImage) {
+      URL.revokeObjectURL(generatedImage); // Free up memory when the image is no longer needed
+    }
+  };
+}, [generatedImage]);
 const handleCaptionChange = (event) => {
   setCaption(event.target.value);
 };
