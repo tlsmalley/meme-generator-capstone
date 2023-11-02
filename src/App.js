@@ -61,14 +61,14 @@ useEffect(() => {
   };
 }, [generatedImage]);
 const handleCaptionChange = (event) => {
+  setCaption(event.target.value);
+};
+
+const handleTemperatureChange = (newValue) => {
   const newTemperature = parseFloat(event.target.value);
   if (!isNaN(newTemperature)) {
     setTemperature(newTemperature);
   }
-};
-
-const handleTemperatureChange = (newValue) => {
-  setTemperature(newValue);
 };
 
   return (
@@ -84,7 +84,7 @@ const handleTemperatureChange = (newValue) => {
               placeholder="Making memes is fun"
               value={caption}
               onChange={handleCaptionChange}
-              style={{ width: '75%%', padding: '10px' }}
+              style={{ width: '75%', padding: '10px' }}
           /></div>
           <div style={{ marginLeft: 'auto', marginRight: 'auto', width: '50%' }}>
           <input
@@ -95,7 +95,7 @@ const handleTemperatureChange = (newValue) => {
               min="0"
               max="1"
               step="0.1"
-              style={{ width: '75%%', padding: '10px' }}
+              style={{ width: '75%', padding: '10px' }}
           /></div>
          <div style={{ marginLeft: 'auto', marginRight: 'auto', width: '50%' }}>
           <CallAPI onClick={handleButtonClick}></CallAPI></div> Your meme will download when complete.
