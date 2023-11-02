@@ -7,33 +7,34 @@
 /* eslint-disable */
 import * as React from "react";
 import { getOverrideProps } from "./utils";
-import { Flex, SliderField } from "@aws-amplify/ui-react";
-export default function TemperatureSlider(props) {
+import { Flex, PasswordField } from "@aws-amplify/ui-react";
+export default function OldCaptionInput(props) {
   const { overrides, ...rest } = props;
   return (
     <Flex
       gap="0"
       direction="column"
       width="unset"
-      height="98px"
+      height="unset"
       justifyContent="flex-start"
       alignItems="flex-start"
       position="relative"
       padding="0px 0px 0px 0px"
-      {...getOverrideProps(overrides, "TemperatureSlider")}
+      {...getOverrideProps(overrides, "OldCaptionInput")}
       {...rest}
     >
-      <SliderField
-        height="92px"
-        label="Temperature"
+      <PasswordField
+        width="300px"
+        height="unset"
+        placeholder="Your Caption Here"
         shrink="0"
-        defaultValue="50"
-        isDisabled={false}
-        labelHidden={false}
-        isValueHidden={false}
         size="large"
-        {...getOverrideProps(overrides, "SliderField")}
-      ></SliderField>
+        isDisabled={false}
+        labelHidden={true}
+        variation="quiet"
+        hideShowPassword={true}
+        {...getOverrideProps(overrides, "PasswordField")}
+      ></PasswordField>
     </Flex>
   );
 }

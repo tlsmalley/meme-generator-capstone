@@ -7,33 +7,34 @@
 /* eslint-disable */
 import * as React from "react";
 import { getOverrideProps } from "./utils";
-import { Flex, SliderField } from "@aws-amplify/ui-react";
-export default function TemperatureSlider(props) {
+import { Flex, TextField } from "@aws-amplify/ui-react";
+export default function TemperatureInput(props) {
   const { overrides, ...rest } = props;
   return (
     <Flex
       gap="0"
       direction="column"
       width="unset"
-      height="98px"
+      height="unset"
       justifyContent="flex-start"
       alignItems="flex-start"
       position="relative"
       padding="0px 0px 0px 0px"
-      {...getOverrideProps(overrides, "TemperatureSlider")}
+      {...getOverrideProps(overrides, "TemperatureInput")}
       {...rest}
     >
-      <SliderField
-        height="92px"
-        label="Temperature"
+      <TextField
+        width="300px"
+        height="unset"
+        label="Input a Temperature"
+        placeholder="e.g., .1, .2, etc."
         shrink="0"
-        defaultValue="50"
+        size="large"
         isDisabled={false}
         labelHidden={false}
-        isValueHidden={false}
-        size="large"
-        {...getOverrideProps(overrides, "SliderField")}
-      ></SliderField>
+        variation="default"
+        {...getOverrideProps(overrides, "TextField")}
+      ></TextField>
     </Flex>
   );
 }
