@@ -5,6 +5,7 @@
  **************************************************************************/
 
 import * as React from "react";
+import { SiteContent } from "../models";
 import { ButtonProps, FlexProps, ImageProps, TextProps } from "@aws-amplify/ui-react";
 export declare type EscapeHatchProps = {
     [elementHierarchy: string]: Record<string, unknown>;
@@ -28,6 +29,8 @@ export declare type NavBarHeaderMemeHeroOverridesProps = {
     Button?: PrimitiveOverrideProps<ButtonProps>;
 } & EscapeHatchProps;
 export declare type NavBarHeaderMemeHeroProps = React.PropsWithChildren<Partial<FlexProps> & {
+    siteContent?: SiteContent;
+} & {
     overrides?: NavBarHeaderMemeHeroOverridesProps | undefined | null;
 }>;
 export default function NavBarHeaderMemeHero(props: NavBarHeaderMemeHeroProps): React.ReactElement;
