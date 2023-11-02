@@ -13,7 +13,8 @@ import {
   InputBox,
   NavBarHeaderMemeHero,
   MarketingFooter,
-  TemperatureSlider
+  TemperatureSlider,
+  TemperatureInput
 } from './ui-components';
 
 function App() {
@@ -62,7 +63,7 @@ const handleTemperatureChange = (newValue) => {
           <HeroLayout1/>
           <br />
          <CaptionInput onChange={handleCaptionChange}></CaptionInput>
-         <TemperatureSlider onChange={handleTemperatureChange}></TemperatureSlider>
+         <TemperatureInput onChange={handleTemperatureChange}></TemperatureInput>
          <CallAPI onClick={handleButtonClick}></CallAPI>
          <br />
          {isLoading && !generatedImage && <div>Loading image...</div>}
