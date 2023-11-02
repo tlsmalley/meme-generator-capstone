@@ -17,9 +17,11 @@ function App() {
   const [caption, setCaption] = useState('');
   const [temperature, setTemperature] = useState(0.5);
   const [generatedImage, setGeneratedImage] = useState(null);
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleButtonClick = async() => {
     console.log('sending api call...');
+    setIsLoading(true);
     try {
       const response = await fetch('**api endpoint*', {
           method: 'POST', 
@@ -33,7 +35,10 @@ function App() {
       console.log(data);
   } catch (error) {
       console.error('error making API call:', error);
+  } finally {
+    setIsLoading(false); //set back at false when image loads
   }
+
 };
 
 const handleCaptionChange = (event) => {
@@ -50,6 +55,7 @@ const handleTemperatureChange = (newValue) => {
          <CallAPI onClick={handleButtonClick}></CallAPI>
          <TemperatureSlider onChange={handleTemperatureChange}></TemperatureSlider>
          <br />
+         {isLoading && !generatedImage && <div>Loading image...</div>}
          {generatedImage && <GeneratedMeme imageUrl={generatedImage}></GeneratedMeme>}
          <br />
          <br />
