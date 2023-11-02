@@ -51,23 +51,25 @@ const handleTemperatureChange = (newValue) => {
 
   return (
     <div className="App">
+          <NavBarHeaderMemeHero/>
+          <br />
+          <HeroLayout1/>
+          <br />
          <CaptionInput onChange={handleCaptionChange}></CaptionInput>
-         <CallAPI onClick={handleButtonClick}></CallAPI>
          <TemperatureSlider onChange={handleTemperatureChange}></TemperatureSlider>
+         <CallAPI onClick={handleButtonClick}></CallAPI>
          <br />
          {isLoading && !generatedImage && <div>Loading image...</div>}
          {generatedImage && <GeneratedMeme imageUrl={generatedImage}></GeneratedMeme>}
          <br />
+         <MarketingFooter/>
          <br />
-      <NavBarHeaderMemeHero/>
-      <br />
-      <HeroLayout1/>
+
       <br />
       <InputBox/>
-      <br />
       <GeneratedMeme/>
       <br />
-      <MarketingFooter/>
+      
     </div>
 
   );
