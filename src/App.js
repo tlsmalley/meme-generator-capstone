@@ -1,4 +1,7 @@
 import './App.css';
+import Amplify from 'aws-amplify';
+import awsconfig from './aws-exports';
+
 //import { ThemeProvider } from '@aws-amplify/ui-react';
 import React, { useState } from 'react';
 import {
@@ -22,13 +25,16 @@ function App() {
   const handleButtonClick = async() => {
     console.log('sending api call...');
     setIsLoading(true);
+
+    const randomUuid = Math.random().toString(36).substring(2, 12);
+
     try {
-      const response = await fetch('**api endpoint*', {
+      const response = await fetch('http://54.149.62.124:5000/generate', {
           method: 'POST', 
           headers: {
             'Content-Type': 'application/json',
           },
-          body: JSON.stringify({"uuid": "test-uuid", "text_prompt": caption, "temperature": temperature})
+          body: JSON.stringify({"uuid": "randomUuid", "text_prompt": caption, "temperature": temperature})
       });
       const data = await response.json();
       setGeneratedImage(data.imageUrl);
