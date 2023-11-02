@@ -29,7 +29,7 @@ function App() {
     const randomUuid = Math.random().toString(36).substring(2, 12);
 
     try {
-      const response = await fetch('http://54.149.62.124:5000/generate', {
+      const response = await fetch('https://cozpvp5akqiqq43lfnfffw6xee0npezn.lambda-url.us-west-2.on.aws/', {
           method: 'POST', 
           headers: {
             'Content-Type': 'application/json',
