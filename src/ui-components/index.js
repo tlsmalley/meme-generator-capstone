@@ -8,6 +8,7 @@ export { default as ActionCard } from "./ActionCard";
 export { default as Ampligram } from "./Ampligram";
 export { default as CTASection } from "./CTASection";
 export { default as CallAPI } from "./CallAPI";
+export { default as CaptionInput } from "./CaptionInput";
 export { default as CheckoutPayment } from "./CheckoutPayment";
 export { default as CommentCard } from "./CommentCard";
 export { default as ContactUs } from "./ContactUs";

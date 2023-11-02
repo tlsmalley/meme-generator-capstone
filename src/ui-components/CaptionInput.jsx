@@ -7,7 +7,7 @@
 /* eslint-disable */
 import * as React from "react";
 import { getOverrideProps } from "./utils";
-import { Flex, PasswordField } from "@aws-amplify/ui-react";
+import { Flex, TextField } from "@aws-amplify/ui-react";
 export default function CaptionInput(props) {
   const { overrides, ...rest } = props;
   return (
@@ -23,18 +23,18 @@ export default function CaptionInput(props) {
       {...getOverrideProps(overrides, "CaptionInput")}
       {...rest}
     >
-      <PasswordField
+      <TextField
         width="300px"
         height="unset"
+        label="Input a Caption"
+        placeholder="Making memes is fun"
         shrink="0"
-        placeholder="Placeholder"
         size="large"
         isDisabled={false}
-        labelHidden={true}
+        labelHidden={false}
         variation="quiet"
-        hideShowPassword={true}
-        {...getOverrideProps(overrides, "PasswordField")}
-      ></PasswordField>
+        {...getOverrideProps(overrides, "TextField")}
+      ></TextField>
     </Flex>
   );
 }
