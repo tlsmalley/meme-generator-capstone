@@ -49,14 +49,6 @@ function App() {
     } finally {
       setIsLoading(false); // Set back to false when image loads or fails to load
     }
-      // const data = await response.json();
-      // setGeneratedImage(data.imageUrl);
-      // console.log(data);
-  // } catch (error) {
-  //     console.error('error making API call:', error);
-  // } finally {
-  //   setIsLoading(false); //set back at false when image loads
-  // }
 
 };
 
@@ -69,7 +61,10 @@ useEffect(() => {
   };
 }, [generatedImage]);
 const handleCaptionChange = (event) => {
-  setCaption(event.target.value);
+  const newTemperature = parseFloat(event.target.value);
+  if (!isNaN(newTemperature)) {
+    setTemperature(newTemperature);
+  }
 };
 
 const handleTemperatureChange = (newValue) => {
@@ -89,6 +84,7 @@ const handleTemperatureChange = (newValue) => {
               placeholder="Making memes is fun"
               value={caption}
               onChange={handleCaptionChange}
+              style={{ width: '75%%', padding: '10px' }}
           /></div>
           <div style={{ marginLeft: 'auto', marginRight: 'auto', width: '50%' }}>
           <input
@@ -99,12 +95,12 @@ const handleTemperatureChange = (newValue) => {
               min="0"
               max="1"
               step="0.1"
-              style={{ width: '100%', padding: '10px' }}
+              style={{ width: '75%%', padding: '10px' }}
           /></div>
          <div style={{ marginLeft: 'auto', marginRight: 'auto', width: '50%' }}>
-          <CallAPI onClick={handleButtonClick}></CallAPI></div>
+          <CallAPI onClick={handleButtonClick}></CallAPI></div> Your meme will download when complete.
          <div style={{ marginLeft: 'auto', marginRight: 'auto', width: '50%' }}>
-         {isLoading && !generatedImage && <div>Loading image... please be patient, greatness takes time</div>}
+         {isLoading && !generatedImage && <div>Loading image... processing may take 1-2 min</div>}
          {generatedImage && <GeneratedMeme imageUrl={generatedImage}></GeneratedMeme>}
          <br /></div>
          <MarketingFooter/>
