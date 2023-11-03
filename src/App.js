@@ -98,7 +98,7 @@ const handleTemperatureChange = (e) => {
               style={{ width: '75%', padding: '10px' }}
           /></div>
          <div style={{ marginLeft: 'auto', marginRight: 'auto', width: '50%' }}>
-          <CallAPI onClick={handleButtonClick}></CallAPI></div> Your meme will download when complete.
+          <CallAPI onClick={handleButtonClick}></CallAPI>Your meme will download when complete.</div> 
          <div style={{ marginLeft: 'auto', marginRight: 'auto', width: '50%' }}>
          {isLoading && !generatedImage && <div>Loading image... processing may take 1-2 min</div>}
          {generatedImage && <GeneratedMeme imageUrl={generatedImage}></GeneratedMeme>}
