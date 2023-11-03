@@ -224,7 +224,7 @@ export default function HeroLayout1(props) {
           position="relative"
           padding="0px 0px 0px 0px"
           objectFit="unset"
-          src="https://imgur.com/a/XvjwOpr"
+          src="https://i.imgur.com/hMvBm3R.png"
           overflow="clip"
           {...getOverrideProps(overrides, "image")}
         ></Image>

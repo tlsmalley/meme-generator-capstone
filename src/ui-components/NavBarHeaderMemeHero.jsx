@@ -37,7 +37,7 @@ export default function NavBarHeaderMemeHero(props) {
         position="relative"
         padding="0px 0px 0px 0px"
         objectFit="cover"
-        src="https://imgur.com/a/9UcyvvS"
+        src="https://i.imgur.com/PLzl2Ie.png"
         overflow="clip"
         {...getOverrideProps(overrides, "lol 2")}
       ></Image>
