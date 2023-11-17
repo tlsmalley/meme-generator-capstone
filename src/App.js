@@ -23,6 +23,14 @@ function App() {
   const [generatedImage, setGeneratedImage] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
 
+  const renderGeneratedImage = () => {
+    if (generatedImage) {
+      return <img src={generatedImage} alt="Generated Meme" style={{ maxWidth: '100%', maxHeight: '500px' }} />;
+    } else {
+      return <div>No image generated yet</div>;
+    }
+  };
+
   const handleButtonClick = async() => {
     console.log('sending api call...');
     setIsLoading(true);
@@ -101,7 +109,7 @@ const handleTemperatureChange = (e) => {
           <CallAPI onClick={handleButtonClick}></CallAPI>Your meme will download when complete.</div> 
          <div style={{ marginLeft: 'auto', marginRight: 'auto', width: '50%' }}>
          {isLoading && !generatedImage && <div>Loading image... processing may take 1-2 min</div>}
-         {generatedImage && <GeneratedMeme imageUrl={generatedImage}></GeneratedMeme>}
+         {renderGeneratedImage()}
          <br /></div>
          <MarketingFooter/>
          <br />
