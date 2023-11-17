@@ -212,7 +212,7 @@ export default function HeroLayout1(props) {
         {...getOverrideProps(overrides, "Right")}
       >
         <Image
-          width="720px"
+          width="360px"
           height="unset"
           display="block"
           gap="unset"
