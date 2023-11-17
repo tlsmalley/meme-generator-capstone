@@ -47,7 +47,7 @@ function App() {
       });
       if (response.ok) {
         const data = await response.json(); 
-        setGeneratedImage(data.imageUrl); 
+        setGeneratedImage(data.image_url); 
         console.log(data);
       } else {
         console.error('HTTP error:', response.status);
