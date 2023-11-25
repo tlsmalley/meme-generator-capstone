@@ -26,7 +26,7 @@ export default function TemperatureInput(props) {
       <TextField
         width="300px"
         height="unset"
-        label="Input a Temperature"
+        label="How creative/abstract do you want your meme to be? Enter a value 0-1, 1 is most creative:"
         placeholder="e.g., .1, .2, etc."
         shrink="0"
         size="large"

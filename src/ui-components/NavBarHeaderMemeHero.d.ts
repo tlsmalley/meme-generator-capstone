@@ -6,7 +6,7 @@
 
 import * as React from "react";
 import { SiteContent } from "../models";
-import { ButtonProps, FlexProps, ImageProps, TextProps } from "@aws-amplify/ui-react";
+import { FlexProps, ImageProps, TextProps, ViewProps } from "@aws-amplify/ui-react";
 export declare type EscapeHatchProps = {
     [elementHierarchy: string]: Record<string, unknown>;
 } | null;
@@ -22,11 +22,10 @@ export declare type NavBarHeaderMemeHeroOverridesProps = {
     NavBarHeaderMemeHero?: PrimitiveOverrideProps<FlexProps>;
     "lol 2"?: PrimitiveOverrideProps<ImageProps>;
     "Frame 321"?: PrimitiveOverrideProps<FlexProps>;
-    Welcome?: PrimitiveOverrideProps<TextProps>;
     "Generate Your Meme"?: PrimitiveOverrideProps<TextProps>;
+    "Frame 437"?: PrimitiveOverrideProps<ViewProps>;
     Contact?: PrimitiveOverrideProps<TextProps>;
     "Privacy & Safety"?: PrimitiveOverrideProps<TextProps>;
-    Button?: PrimitiveOverrideProps<ButtonProps>;
 } & EscapeHatchProps;
 export declare type NavBarHeaderMemeHeroProps = React.PropsWithChildren<Partial<FlexProps> & {
     siteContent?: SiteContent;

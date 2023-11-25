@@ -5,13 +5,14 @@
  **************************************************************************/
 
 import * as React from "react";
+import { ButtonProps, FlexProps, ViewProps } from "@aws-amplify/ui-react";
 import { NavBarHeaderMemeHeroProps } from "./NavBarHeaderMemeHero";
 import { HeroLayout1Props } from "./HeroLayout1";
-import { InputBoxProps } from "./InputBox";
+import { CaptionInputProps } from "./CaptionInput";
+import { TemperatureSliderProps } from "./TemperatureSlider";
 import { GeneratedMemeProps } from "./GeneratedMeme";
-import { CTASectionProps } from "./CTASection";
 import { MarketingFooterProps } from "./MarketingFooter";
-import { FlexProps, ViewProps } from "@aws-amplify/ui-react";
+import { InputBoxProps } from "./InputBox";
 export declare type EscapeHatchProps = {
     [elementHierarchy: string]: Record<string, unknown>;
 } | null;
@@ -25,14 +26,15 @@ export declare type Variant = {
 export declare type PrimitiveOverrideProps<T> = Partial<T> & React.DOMAttributes<HTMLDivElement>;
 export declare type HomePageOverridesProps = {
     HomePage?: PrimitiveOverrideProps<FlexProps>;
+    Button?: PrimitiveOverrideProps<ButtonProps>;
     "NavBarHeader-MemeHero"?: NavBarHeaderMemeHeroProps;
     HeroLayout1?: HeroLayout1Props;
-    InputBox39611732?: InputBoxProps;
+    CaptionInput?: CaptionInputProps;
+    TemperatureSlider?: TemperatureSliderProps;
     GeneratedMeme?: GeneratedMemeProps;
-    CTASection?: CTASectionProps;
     MarketingFooter?: MarketingFooterProps;
     "Frame 4381"?: PrimitiveOverrideProps<ViewProps>;
-    InputBox39611748?: InputBoxProps;
+    InputBox?: InputBoxProps;
 } & EscapeHatchProps;
 export declare type HomePageProps = React.PropsWithChildren<Partial<FlexProps> & {
     Logo?: String;

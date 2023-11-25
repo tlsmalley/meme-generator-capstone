@@ -27,7 +27,7 @@ export default function CaptionInput(props) {
         width="300px"
         height="unset"
         label="Input a Caption"
-        placeholder="Making memes is fun"
+        placeholder="Making memes is fun!"
         shrink="0"
         size="large"
         isDisabled={false}

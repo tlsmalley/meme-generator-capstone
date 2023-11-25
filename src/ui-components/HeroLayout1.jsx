@@ -21,8 +21,8 @@ export default function HeroLayout1(props) {
         Heading: {},
         Body: {},
         Message: {},
-        Button: {},
         HeroMessage: {},
+        Button: {},
         Left: {},
         image: {},
         Right: {},
@@ -32,22 +32,14 @@ export default function HeroLayout1(props) {
     },
     {
       overrides: {
-        Eyebrow: { fontFamily: "Inter", color: "rgba(188,236,245,1)" },
-        Heading: {
-          color: "rgba(255,255,255,1)",
-          children: "MemeMe is for You!",
-        },
-        Body: {
-          fontFamily: "Inter",
-          color: "rgba(255,255,255,1)",
-          children:
-            "Enter a caption and receive 3, unique, never-before-seen memes to download or share with friends!",
-        },
+        Eyebrow: {},
+        Heading: {},
+        Body: {},
         Message: {},
-        Button: {},
         HeroMessage: {},
-        Left: { backgroundColor: "rgba(13,26,38,1)" },
-        image: { width: "unset", alignSelf: "stretch" },
+        Button: {},
+        Left: { backgroundColor: "rgba(17,78,41,1)" },
+        image: {},
         Right: {},
         HeroLayout1: {},
       },
@@ -63,7 +55,7 @@ export default function HeroLayout1(props) {
       gap="0"
       direction="row"
       width="1440px"
-      height="unset"
+      height="397px"
       justifyContent="center"
       alignItems="center"
       position="relative"
@@ -84,7 +76,7 @@ export default function HeroLayout1(props) {
         alignSelf="stretch"
         position="relative"
         padding="120px 120px 120px 120px"
-        backgroundColor="rgba(255,255,255,1)"
+        backgroundColor="rgba(39,159,87,1)"
         display="flex"
         {...getOverrideProps(overrides, "Left")}
       >
@@ -120,7 +112,7 @@ export default function HeroLayout1(props) {
               fontFamily="Montserrat"
               fontSize="16px"
               fontWeight="700"
-              color="rgba(64,170,191,1)"
+              color="rgba(233,249,252,1)"
               lineHeight="24px"
               textAlign="center"
               display="block"
@@ -135,14 +127,14 @@ export default function HeroLayout1(props) {
               position="relative"
               padding="0px 0px 0px 0px"
               whiteSpace="pre-wrap"
-              children="Welcome"
+              children="WELCOME"
               {...getOverrideProps(overrides, "Eyebrow")}
             ></Text>
             <Text
-              fontFamily="Inter"
-              fontSize="24px"
+              fontFamily="Montserrat"
+              fontSize="40px"
               fontWeight="600"
-              color="rgba(13,26,38,1)"
+              color="rgba(255,255,255,1)"
               lineHeight="30px"
               textAlign="center"
               display="block"
@@ -157,14 +149,14 @@ export default function HeroLayout1(props) {
               position="relative"
               padding="0px 0px 0px 0px"
               whiteSpace="pre-wrap"
-              children="MemeHero is for You!"
+              children="MEMEHERO is for You!"
               {...getOverrideProps(overrides, "Heading")}
             ></Text>
             <Text
               fontFamily="Montserrat"
               fontSize="16px"
               fontWeight="400"
-              color="rgba(48,64,80,1)"
+              color="rgba(255,255,255,1)"
               lineHeight="24px"
               textAlign="center"
               display="block"
@@ -184,17 +176,17 @@ export default function HeroLayout1(props) {
               {...getOverrideProps(overrides, "Body")}
             ></Text>
           </Flex>
-          <Button
-            width="unset"
-            height="unset"
-            shrink="0"
-            size="large"
-            isDisabled={false}
-            variation="primary"
-            children="Get started"
-            {...getOverrideProps(overrides, "Button")}
-          ></Button>
         </Flex>
+        <Button
+          width="unset"
+          height="unset"
+          shrink="0"
+          size="large"
+          isDisabled={false}
+          variation="primary"
+          children="Get started"
+          {...getOverrideProps(overrides, "Button")}
+        ></Button>
       </Flex>
       <Flex
         gap="10px"
@@ -212,7 +204,7 @@ export default function HeroLayout1(props) {
         {...getOverrideProps(overrides, "Right")}
       >
         <Image
-          width="360px"
+          width="720px"
           height="unset"
           display="block"
           gap="unset"
@@ -223,7 +215,7 @@ export default function HeroLayout1(props) {
           basis="0"
           position="relative"
           padding="0px 0px 0px 0px"
-          objectFit="unset"
+          objectFit="cover"
           src="https://i.imgur.com/hMvBm3R.png"
           overflow="clip"
           {...getOverrideProps(overrides, "image")}

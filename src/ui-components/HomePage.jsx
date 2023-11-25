@@ -7,13 +7,14 @@
 /* eslint-disable */
 import * as React from "react";
 import { getOverrideProps } from "./utils";
+import { Button, Flex, View } from "@aws-amplify/ui-react";
 import NavBarHeaderMemeHero from "./NavBarHeaderMemeHero";
 import HeroLayout1 from "./HeroLayout1";
-import InputBox from "./InputBox";
+import CaptionInput from "./CaptionInput";
+import TemperatureSlider from "./TemperatureSlider";
 import GeneratedMeme from "./GeneratedMeme";
-import CTASection from "./CTASection";
 import MarketingFooter from "./MarketingFooter";
-import { Flex, View } from "@aws-amplify/ui-react";
+import InputBox from "./InputBox";
 export default function HomePage(props) {
   const { Logo, overrides, ...rest } = props;
   return (
@@ -21,7 +22,7 @@ export default function HomePage(props) {
       gap="0"
       direction="column"
       width="1440px"
-      height="unset"
+      height="2084px"
       justifyContent="flex-start"
       alignItems="flex-start"
       overflow="hidden"
@@ -31,20 +32,31 @@ export default function HomePage(props) {
       {...getOverrideProps(overrides, "HomePage")}
       {...rest}
     >
+      <Button
+        width="152px"
+        height="43px"
+        padding="7px 49px 7px 49px"
+        shrink="0"
+        size="default"
+        isDisabled={false}
+        variation="primary"
+        children="Generate"
+        {...getOverrideProps(overrides, "Button")}
+      ></Button>
       <NavBarHeaderMemeHero
         display="flex"
         gap="40px"
         direction="row"
         width="1440px"
-        height="209px"
-        justifyContent="center"
+        height="155px"
+        justifyContent="flex-start"
         alignItems="center"
         overflow="hidden"
         shrink="0"
         position="relative"
         boxShadow="0px 2px 6px rgba(0.05098039284348488, 0.10196078568696976, 0.14901961386203766, 0.15000000596046448)"
         padding="24px 32px 24px 32px"
-        backgroundColor="rgba(255,255,255,1)"
+        backgroundColor="rgba(39,159,87,1)"
         {...getOverrideProps(overrides, "NavBarHeader-MemeHero")}
       ></NavBarHeaderMemeHero>
       <HeroLayout1
@@ -52,7 +64,7 @@ export default function HomePage(props) {
         gap="0"
         direction="row"
         width="1440px"
-        height="unset"
+        height="537px"
         justifyContent="center"
         alignItems="center"
         shrink="0"
@@ -61,20 +73,32 @@ export default function HomePage(props) {
         mode="Light"
         {...getOverrideProps(overrides, "HeroLayout1")}
       ></HeroLayout1>
-      <InputBox
-        width="1440px"
-        height="430px"
-        display="block"
-        gap="unset"
-        alignItems="unset"
-        justifyContent="unset"
-        overflow="hidden"
+      <CaptionInput
+        display="flex"
+        gap="0"
+        direction="column"
+        width="860px"
+        height="128px"
+        justifyContent="center"
+        alignItems="flex-start"
         shrink="0"
         position="relative"
-        padding="0px 0px 0px 0px"
-        backgroundColor="rgba(255,255,255,1)"
-        {...getOverrideProps(overrides, "InputBox39611732")}
-      ></InputBox>
+        padding="0px 500px 0px 500px"
+        {...getOverrideProps(overrides, "CaptionInput")}
+      ></CaptionInput>
+      <TemperatureSlider
+        display="flex"
+        gap="0"
+        direction="column"
+        width="1304px"
+        height="98px"
+        justifyContent="center"
+        alignItems="center"
+        shrink="0"
+        position="relative"
+        padding="5px 500px 5px 500px"
+        {...getOverrideProps(overrides, "TemperatureSlider")}
+      ></TemperatureSlider>
       <GeneratedMeme
         width="600px"
         height="600px"
@@ -89,21 +113,6 @@ export default function HomePage(props) {
         backgroundColor="rgba(255,255,255,1)"
         {...getOverrideProps(overrides, "GeneratedMeme")}
       ></GeneratedMeme>
-      <CTASection
-        display="flex"
-        gap="10px"
-        direction="column"
-        width="1440px"
-        height="288px"
-        justifyContent="center"
-        alignItems="flex-start"
-        overflow="hidden"
-        shrink="0"
-        position="relative"
-        padding="160px 160px 160px 160px"
-        backgroundColor="rgba(255,255,255,1)"
-        {...getOverrideProps(overrides, "CTASection")}
-      ></CTASection>
       <MarketingFooter
         display="flex"
         gap="32px"
@@ -115,7 +124,7 @@ export default function HomePage(props) {
         shrink="0"
         position="relative"
         padding="40px 40px 40px 40px"
-        backgroundColor="rgba(250,250,250,1)"
+        backgroundColor="rgba(39,159,87,1)"
         {...getOverrideProps(overrides, "MarketingFooter")}
       ></MarketingFooter>
       <View
@@ -144,7 +153,7 @@ export default function HomePage(props) {
           left="-64px"
           padding="0px 0px 0px 0px"
           backgroundColor="rgba(255,255,255,1)"
-          {...getOverrideProps(overrides, "InputBox39611748")}
+          {...getOverrideProps(overrides, "InputBox")}
         ></InputBox>
       </View>
     </Flex>
