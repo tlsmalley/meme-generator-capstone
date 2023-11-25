@@ -30,7 +30,7 @@ export default function CallAPI(props) {
         size="default"
         isDisabled={false}
         variation="primary"
-        children="Generate Meme"
+        children="Button"
         {...getOverrideProps(overrides, "Button")}
       ></Button>
     </Flex>

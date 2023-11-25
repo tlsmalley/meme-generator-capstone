@@ -87,7 +87,6 @@ const handleTemperatureChange = (e) => {
           <br />
           
           <div style={{ marginLeft: 'auto', marginRight: 'auto', width: '50%' }}>
-          <br>Enter your caption below </br>
           <input
               type="text"
               placeholder="Making memes is fun"
@@ -96,11 +95,9 @@ const handleTemperatureChange = (e) => {
               style={{ width: '75%', padding: '10px' }}
           /></div>
           <div style={{ marginLeft: 'auto', marginRight: 'auto', width: '50%' }}>
-            <br>How creative/abstract do you want your meme to be? </br>
-            <br>Enter a value 0-1, 1 is most creative:</br>
           <input
               type="number"
-              placeholder="e.g., .1, .2, etc."
+              placeholder="Set temperature"
               value={temperature}
               onChange={(e) => handleTemperatureChange(e)}
               min="0"
