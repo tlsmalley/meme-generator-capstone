@@ -42,6 +42,10 @@ function App() {
     }
   };
 
+  const handleVote = (voteType) => {
+    console.log("working", voteType);
+  };
+
   const handleButtonClick = async() => {
     console.log('sending api call...');
     setIsLoading(true);
