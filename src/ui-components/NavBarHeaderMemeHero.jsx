@@ -21,7 +21,7 @@ export default function NavBarHeaderMemeHero(props) {
       overflow="hidden"
       position="relative"
       boxShadow="0px 2px 6px rgba(0.05098039284348488, 0.10196078568696976, 0.14901961386203766, 0.15000000596046448)"
-      padding="24px 32px 24px 32px"
+      padding="24px 32px 13px 32px"
       backgroundColor="rgba(39,159,87,1)"
       {...getOverrideProps(overrides, "NavBarHeaderMemeHero")}
       {...rest}
@@ -45,7 +45,7 @@ export default function NavBarHeaderMemeHero(props) {
         gap="32px"
         direction="row"
         width="652px"
-        height="105px"
+        height="65px"
         justifyContent="flex-start"
         alignItems="center"
         shrink="0"
@@ -54,7 +54,7 @@ export default function NavBarHeaderMemeHero(props) {
         {...getOverrideProps(overrides, "Frame 321")}
       >
         <Text
-          fontFamily="Inter"
+          fontFamily="Montserrat"
           fontSize="20px"
           fontWeight="700"
           color="rgba(255,255,255,1)"
@@ -88,7 +88,7 @@ export default function NavBarHeaderMemeHero(props) {
           {...getOverrideProps(overrides, "Frame 437")}
         >
           <Text
-            fontFamily="Inter"
+            fontFamily="Montserrat"
             fontSize="20px"
             fontWeight="700"
             color="rgba(255,255,255,1)"
@@ -111,7 +111,7 @@ export default function NavBarHeaderMemeHero(props) {
           ></Text>
         </View>
         <Text
-          fontFamily="Inter"
+          fontFamily="Montserrat"
           fontSize="20px"
           fontWeight="700"
           color="rgba(255,255,255,1)"

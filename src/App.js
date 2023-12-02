@@ -23,9 +23,20 @@ function App() {
   const [generatedImage, setGeneratedImage] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
 
+  const buttonStyle = {
+    margin: '10px',
+    padding: '5px 10px',
+    fontSize: '16px',
+    cursor: 'pointer',
+  };
+
   const renderGeneratedImage = () => {
     if (generatedImage) {
-      return <img src={generatedImage} alt="Generated Meme" style={{ maxWidth: '100%', maxHeight: '500px' }} />;
+      return <div> 
+        <img src={generatedImage} alt="Generated Meme" style={{ maxWidth: '100%', maxHeight: '500px' }} />
+        <button style={buttonStyle} onClick={() => handleVote('upvote')}>Upvote</button>
+        <button style={buttonStyle} onClick={() => handleVote('downvote')}>Downvote</button>
+        </div>
     } else {
       return <div>No image generated yet</div>;
     }
