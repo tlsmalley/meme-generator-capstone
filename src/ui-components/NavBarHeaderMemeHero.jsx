@@ -15,7 +15,7 @@ export default function NavBarHeaderMemeHero(props) {
       gap="40px"
       direction="row"
       width="1440px"
-      height="155px"
+      height="105px"
       justifyContent="flex-start"
       alignItems="center"
       overflow="hidden"
@@ -44,8 +44,8 @@ export default function NavBarHeaderMemeHero(props) {
       <Flex
         gap="32px"
         direction="row"
-        width="652px"
-        height="65px"
+        width="603px"
+        height="57px"
         justifyContent="flex-start"
         alignItems="center"
         shrink="0"
@@ -55,7 +55,7 @@ export default function NavBarHeaderMemeHero(props) {
       >
         <Text
           fontFamily="Montserrat"
-          fontSize="20px"
+          fontSize="15px"
           fontWeight="700"
           color="rgba(255,255,255,1)"
           lineHeight="24px"
@@ -89,7 +89,7 @@ export default function NavBarHeaderMemeHero(props) {
         >
           <Text
             fontFamily="Montserrat"
-            fontSize="20px"
+            fontSize="15px"
             fontWeight="700"
             color="rgba(255,255,255,1)"
             lineHeight="24px"
@@ -112,7 +112,7 @@ export default function NavBarHeaderMemeHero(props) {
         </View>
         <Text
           fontFamily="Montserrat"
-          fontSize="20px"
+          fontSize="15px"
           fontWeight="700"
           color="rgba(255,255,255,1)"
           lineHeight="24px"

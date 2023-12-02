@@ -48,7 +48,7 @@ export default function HomePage(props) {
         gap="40px"
         direction="row"
         width="1440px"
-        height="155px"
+        height="105px"
         justifyContent="flex-start"
         alignItems="center"
         overflow="hidden"

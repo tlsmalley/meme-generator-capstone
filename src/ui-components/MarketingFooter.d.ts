@@ -5,7 +5,7 @@
  **************************************************************************/
 
 import * as React from "react";
-import { ButtonProps, DividerProps, FlexProps, TextFieldProps, TextProps, ViewProps } from "@aws-amplify/ui-react";
+import { DividerProps, FlexProps, TextProps, ViewProps } from "@aws-amplify/ui-react";
 export declare type EscapeHatchProps = {
     [elementHierarchy: string]: Record<string, unknown>;
 } | null;
@@ -19,13 +19,6 @@ export declare type Variant = {
 export declare type PrimitiveOverrideProps<T> = Partial<T> & React.DOMAttributes<HTMLDivElement>;
 export declare type MarketingFooterOverridesProps = {
     MarketingFooter?: PrimitiveOverrideProps<FlexProps>;
-    "Frame 313"?: PrimitiveOverrideProps<FlexProps>;
-    "Frame 434"?: PrimitiveOverrideProps<FlexProps>;
-    "Sign up for our newsletter"?: PrimitiveOverrideProps<TextProps>;
-    "No spam. We promise."?: PrimitiveOverrideProps<TextProps>;
-    "Frame 435"?: PrimitiveOverrideProps<FlexProps>;
-    TextField?: PrimitiveOverrideProps<TextFieldProps>;
-    Button?: PrimitiveOverrideProps<ButtonProps>;
     Divider39413816?: PrimitiveOverrideProps<DividerProps>;
     "Frame 40529766988"?: PrimitiveOverrideProps<FlexProps>;
     "Frame 403"?: PrimitiveOverrideProps<FlexProps>;
