@@ -6,10 +6,20 @@
 
 /* eslint-disable */
 import * as React from "react";
-import { getOverrideProps } from "./utils";
+import { getOverrideProps, useNavigateAction } from "./utils";
 import { Divider, Flex, Text, View } from "@aws-amplify/ui-react";
 export default function MarketingFooter(props) {
   const { overrides, ...rest } = props;
+  const privacyPolicyOnClick = useNavigateAction({
+    target: "_blank",
+    type: "url",
+    url: "https://drive.google.com/file/d/1A_SkgdVXiyRE8fSRvWepxysjGZbMGQK3/view?usp=sharing",
+  });
+  const contactOnClick = useNavigateAction({
+    target: "_blank",
+    type: "url",
+    url: "mailto:contact@memehero.com",
+  });
   return (
     <Flex
       gap="32px"
@@ -157,6 +167,9 @@ export default function MarketingFooter(props) {
             padding="0px 0px 0px 0px"
             whiteSpace="pre-wrap"
             children="Privacy Policy"
+            onClick={() => {
+              privacyPolicyOnClick();
+            }}
             {...getOverrideProps(overrides, "Privacy Policy")}
           ></Text>
         </Flex>
@@ -214,6 +227,9 @@ export default function MarketingFooter(props) {
             padding="0px 0px 0px 0px"
             whiteSpace="pre-wrap"
             children="Contact"
+            onClick={() => {
+              contactOnClick();
+            }}
             {...getOverrideProps(overrides, "Contact")}
           ></Text>
         </Flex>

@@ -6,10 +6,24 @@
 
 /* eslint-disable */
 import * as React from "react";
-import { getOverrideProps } from "./utils";
+import { getOverrideProps, useNavigateAction } from "./utils";
 import { Flex, Image, Text, View } from "@aws-amplify/ui-react";
 export default function NavBarHeaderMemeHero(props) {
   const { siteContent, overrides, ...rest } = props;
+  const generateYourMemeOnClick = useNavigateAction({
+    anchor: "",
+    type: "anchor",
+  });
+  const contactOnClick = useNavigateAction({
+    target: "_blank",
+    type: "url",
+    url: "mailto:contact@memehero.com",
+  });
+  const privacyAmpersandSafetyOnClick = useNavigateAction({
+    target: "_blank",
+    type: "url",
+    url: "https://drive.google.com/file/d/1A_SkgdVXiyRE8fSRvWepxysjGZbMGQK3/view?usp=sharing",
+  });
   return (
     <Flex
       gap="40px"
@@ -37,7 +51,7 @@ export default function NavBarHeaderMemeHero(props) {
         position="relative"
         padding="0px 0px 0px 0px"
         objectFit="cover"
-        src="https://i.imgur.com/44D2UZz.png"
+        src="https://i.imgur.com/Q6p4Jd8.png"
         overflow="clip"
         {...getOverrideProps(overrides, "lol 2")}
       ></Image>
@@ -72,6 +86,9 @@ export default function NavBarHeaderMemeHero(props) {
           padding="0px 0px 0px 0px"
           whiteSpace="pre-wrap"
           children="Generate Your Meme"
+          onClick={() => {
+            generateYourMemeOnClick();
+          }}
           {...getOverrideProps(overrides, "Generate Your Meme")}
         ></Text>
         <View
@@ -107,6 +124,9 @@ export default function NavBarHeaderMemeHero(props) {
             padding="0px 0px 0px 0px"
             whiteSpace="pre-wrap"
             children="Contact"
+            onClick={() => {
+              contactOnClick();
+            }}
             {...getOverrideProps(overrides, "Contact")}
           ></Text>
         </View>
@@ -129,6 +149,9 @@ export default function NavBarHeaderMemeHero(props) {
           padding="0px 0px 0px 0px"
           whiteSpace="pre-wrap"
           children="Privacy & Safety"
+          onClick={() => {
+            privacyAmpersandSafetyOnClick();
+          }}
           {...getOverrideProps(overrides, "Privacy & Safety")}
         ></Text>
       </Flex>
